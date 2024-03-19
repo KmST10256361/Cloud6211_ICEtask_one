@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Games center !!!</h1>
+    <p> you can view games produced by many studios  </p>
+    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/download3.jpg"
+                           height="350px" width="400"/> </a>
+   
+        <!-- pricaxy  button -->
+        <button type="button" onclick="redirectToAnotherForm()">Go to privacy form </button>
+
+        <!--button click event -->
+        <script>
+            function redirectToAnotherForm() {
+                // Redirect the user to another form/page
+            window.location.href = '@Url.Action("Privacy","Home")'; // Replace "ActionName" and "ControllerName" with the appropriate values
+            }
+        </script>
+
+    <!-- view  button -->
+    <button type="button" onclick="redirectToAnotherForm()">Go to View games form </button>
+
+    <script>
+        function redirectToAnotherForm() {
+            // Redirect the user to another form/page
+            window.location.href = '@Url.Action("ViewGames", "Home")'; // Replace "ActionName" and "ControllerName" with the appropriate values
+        }
+    </script>
+
+</div>
